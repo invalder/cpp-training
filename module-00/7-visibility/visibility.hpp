@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memberattr-funcs.hpp                               :+:      :+:    :+:   */
+/*   visibility.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 17:29:33 by nnakarac          #+#    #+#             */
-/*   Updated: 2023/02/13 18:00:49 by nnakarac         ###   ########.fr       */
+/*   Updated: 2023/02/13 21:44:25 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLASS_INSTANCE_H
-# define CLASS_INSTANCE_H
+#ifndef VISIBILITY_H
+# define VISIBILITY_H
 
 class Sample
 {
-public:
-	int		foo;
+	public:
+			int		PublicFoo;
 
-	Sample(void);
-	~Sample(void);
+			// need to consider what makes more sense to place the constructor \
+			// and destructor in private or public
+			Sample(void);
+			~Sample(void);
 
-	void	bar(char *);
+			void	PublicBar(void) const;
+
+	private:
+			// use _ prefix for all private identifier
+			// it gives reader a quick idea of which is public or private
+			int		_PrivateFoo;
+
+			void	_PrivateBar(void) const;
+
 };
 
 
