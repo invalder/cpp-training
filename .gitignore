@@ -31,4 +31,12 @@
 *.out
 *.app
 
+#execution files
 */*/namespaces
+*/*/steams
+*/*/class-instance
+*/*/memberattr-funcs
+
+
+# VS code Setting.json
+settings.json
