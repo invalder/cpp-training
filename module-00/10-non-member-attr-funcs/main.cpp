@@ -6,21 +6,37 @@
 /*   By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 17:34:34 by nnakarac          #+#    #+#             */
-/*   Updated: 2023/02/14 00:24:16 by nnakarac         ###   ########.fr       */
+/*   Updated: 2023/02/14 20:40:04 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "getters.hpp"
+#include "Sample.class.hpp"
 
-int	main(void)
+void f0(void)
 {
-	Sample	instance;
+	Sample instance;
 
-	instance.setFoo(42);
-	std::cout << "instance.getFoo() = " << instance.getFoo() << std::endl;
-	instance.setFoo(65535);
-	std::cout << "instance.getFoo() = " << instance.getFoo() << std::endl;
+	std::cout << "Number of instances = " << instance.getNbInst() << std::endl;
 
-	return (0);
+	return;
+}
+
+void f1(void)
+{
+	Sample instance;
+
+	std::cout << "Number of instances = " << instance.getNbInst() << std::endl;
+	f0();
+
+	return;
+}
+
+int main(void)
+{
+	std::cout << "Number of instances = " << Sample::getNbInst() << std::endl;
+	f1();
+	std::cout << "Number of instances = " << Sample::getNbInst() << std::endl;
+
+	return 0;
 }

@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Sample.class.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/13 17:34:34 by nnakarac          #+#    #+#             */
-/*   Updated: 2023/02/14 00:24:16 by nnakarac         ###   ########.fr       */
+/*   Created: 2023/02/13 17:29:33 by nnakarac          #+#    #+#             */
+/*   Updated: 2023/02/14 15:27:36 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "getters.hpp"
+#ifndef SAMPLE_CLASS_H
+# define SAMPLE_CLASS_H
 
-int	main(void)
+class Sample
 {
-	Sample	instance;
+public:
+	Sample(int v);
+	~Sample(void);
 
-	instance.setFoo(42);
-	std::cout << "instance.getFoo() = " << instance.getFoo() << std::endl;
-	instance.setFoo(65535);
-	std::cout << "instance.getFoo() = " << instance.getFoo() << std::endl;
+	int	getFoo(void) const;
+	int	Compare(Sample *other) const;
 
-	return (0);
-}
+private:
+	int	_foo;
+};
+
+#endif

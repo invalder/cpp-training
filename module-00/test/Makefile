@@ -6,13 +6,13 @@
 #    By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/13 12:00:53 by nnakarac          #+#    #+#              #
-#    Updated: 2023/02/14 22:28:47 by nnakarac         ###   ########.fr        #
+#    Updated: 2023/02/14 22:28:00 by nnakarac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = steams
+NAME = test
 
-CC = c++
+CC = c++ -g
 CFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 RM		= rm -rf
@@ -24,7 +24,8 @@ GRAY		=	\e[33;2;37m
 RESET		=	\e[0m
 CURSIVE		=	\e[33;3m
 
-SRCS = steams.cpp \
+SRCS = test.cpp \
+	main.cpp \
 
 all: $(NAME)
 

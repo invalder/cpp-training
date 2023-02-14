@@ -6,11 +6,11 @@
 #    By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/13 12:00:53 by nnakarac          #+#    #+#              #
-#    Updated: 2023/02/13 21:37:27 by nnakarac         ###   ########.fr        #
+#    Updated: 2023/02/14 22:27:35 by nnakarac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = visibility
+NAME = getters
 
 CC = c++
 CFLAGS	= -Wall -Wextra -Werror -std=c++98
@@ -24,7 +24,7 @@ GRAY		=	\e[33;2;37m
 RESET		=	\e[0m
 CURSIVE		=	\e[33;3m
 
-SRCS = visibility.cpp \
+SRCS = getters.cpp \
 	main.cpp \
 
 all: $(NAME)
@@ -32,15 +32,15 @@ all: $(NAME)
 $(NAME):
 	@printf "$(CURSIVE)$(GRAY) 	- Compiling $(NAME)... $(RESET)\n"
 	@$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
-	@printf "$(GREEN)    - Executable ready.\n$(RESET)"
+	@printf "$(GREEN)    - $(NAME) Executable ready.\n$(RESET)"
 
 clean:
 	@$(RM) $(NAME)
-	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
+	@printf "$(YELLOW)    - $(NAME) Executable removed.$(RESET)\n"
 
 fclean:
 	@$(RM) $(NAME)
-	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
+	@printf "$(YELLOW)    - $(NAME) Executable removed.$(RESET)\n"
 
 re: fclean all
 

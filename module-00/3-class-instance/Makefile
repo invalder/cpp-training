@@ -6,7 +6,7 @@
 #    By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/13 12:00:53 by nnakarac          #+#    #+#              #
-#    Updated: 2023/02/13 17:39:01 by nnakarac         ###   ########.fr        #
+#    Updated: 2023/02/14 22:28:38 by nnakarac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,15 +32,15 @@ all: $(NAME)
 $(NAME):
 	@printf "$(CURSIVE)$(GRAY) 	- Compiling $(NAME)... $(RESET)\n"
 	@$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
-	@printf "$(GREEN)    - Executable ready.\n$(RESET)"
+	@printf "$(GREEN)    - $(NAME) Executable ready.\n$(RESET)"
 
 clean:
 	@$(RM) $(NAME)
-	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
+	@printf "$(YELLOW)    - $(NAME) Executable removed.$(RESET)\n"
 
 fclean:
 	@$(RM) $(NAME)
-	@printf "$(YELLOW)    - Executable removed.$(RESET)\n"
+	@printf "$(YELLOW)    - $(NAME) Executable removed.$(RESET)\n"
 
 re: fclean all
 
