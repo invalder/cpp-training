@@ -6,7 +6,7 @@
 #    By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/13 12:00:53 by nnakarac          #+#    #+#              #
-#    Updated: 2023/02/14 22:27:35 by nnakarac         ###   ########.fr        #
+#    Updated: 2023/02/14 22:34:20 by nnakarac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,8 @@ CURSIVE		=	\e[33;3m
 SRCS = getters.cpp \
 	main.cpp \
 
+DBG = *.dSYM
+
 all: $(NAME)
 
 $(NAME):
@@ -35,11 +37,11 @@ $(NAME):
 	@printf "$(GREEN)    - $(NAME) Executable ready.\n$(RESET)"
 
 clean:
-	@$(RM) $(NAME)
+	@$(RM) $(NAME) $(DBG)
 	@printf "$(YELLOW)    - $(NAME) Executable removed.$(RESET)\n"
 
 fclean:
-	@$(RM) $(NAME)
+	@$(RM) $(NAME) $(DBG)
 	@printf "$(YELLOW)    - $(NAME) Executable removed.$(RESET)\n"
 
 re: fclean all

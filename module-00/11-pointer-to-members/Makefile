@@ -6,11 +6,11 @@
 #    By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/13 12:00:53 by nnakarac          #+#    #+#              #
-#    Updated: 2023/02/14 22:33:38 by nnakarac         ###   ########.fr        #
+#    Updated: 2023/02/14 22:40:56 by nnakarac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = namespaces
+NAME = pointer-to-members
 
 CC = c++
 CFLAGS	= -Wall -Wextra -Werror -std=c++98
@@ -24,7 +24,8 @@ GRAY		=	\e[33;2;37m
 RESET		=	\e[0m
 CURSIVE		=	\e[33;3m
 
-SRCS = namespaces.cpp \
+SRCS = Sample.class.cpp \
+	main.cpp \
 
 DBG = *.dSYM
 
