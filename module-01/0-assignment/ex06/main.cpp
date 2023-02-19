@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nnakarac <nnakarac@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/19 02:06:16 by nnakarac          #+#    #+#             */
-/*   Updated: 2023/02/19 14:41:48 by nnakarac         ###   ########.fr       */
+/*   Created: 2023/02/19 14:41:23 by nnakarac          #+#    #+#             */
+/*   Updated: 2023/02/19 15:25:10 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
+#include "Harl.hpp"
 
-#include <iostream>
-#include <string>
-#include "Weapon.hpp"
-
-class HumanA
+int	main(int argc, char **argv)
 {
-private:
-	std::string	_name;
-	Weapon& _weapon;
-
-public:
-	HumanA(std::string name, Weapon& wname);
-	~HumanA();
-
-	void attack(void);
-};
-
-#endif
+	if (argc != 2)
+	{
+		std::cerr << "Only 2 argument are accepted" << std::endl;
+		std::cerr << "./<executable> <level>" << std::endl;
+		return (1);
+	}
+	Harl	testHarl(argv[1]);
+	testHarl.complain();
+	return (0);
+}

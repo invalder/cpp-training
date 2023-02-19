@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Sed.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nnakarac <nnakarac@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 09:19:52 by nnakarac          #+#    #+#             */
-/*   Updated: 2023/02/19 11:02:16 by nnakarac         ###   ########.fr       */
+/*   Updated: 2023/02/19 14:41:39 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SED_H
-# define SED_H
+#ifndef SED_HPP
+# define SED_HPP
 
 # include <iostream>
 # include <string>

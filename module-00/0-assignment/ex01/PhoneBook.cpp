@@ -6,7 +6,7 @@
 /*   By: nnakarac <nnakarac@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 13:04:02 by nnakarac          #+#    #+#             */
-/*   Updated: 2023/02/16 16:46:58 by nnakarac         ###   ########.fr       */
+/*   Updated: 2023/02/16 21:42:13 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,8 @@ int	PhoneBook::search_contact(void)
 			std::cout << std::right << std::setw(10) << index + 1 << "|";
 			std::cout << std::right << std::setw(10) << ft_truncate(first_name, 10) << "|";
 			std::cout << std::right << std::setw(10) << ft_truncate(last_name, 10) << "|";
-			std::cout << std::right << std::setw(10) << ft_truncate(nickname, 10) << "|" << std::endl;
+			std::cout << std::right << std::setw(10) << ft_truncate(nickname, 10) << "|";
+			std::cout << std::endl;
 		}
 		i++;
 	}
