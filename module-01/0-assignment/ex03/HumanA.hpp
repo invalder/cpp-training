@@ -1,44 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/16 12:40:57 by nnakarac          #+#    #+#             */
-/*   Updated: 2023/02/18 15:31:27 by nnakarac         ###   ########.fr       */
+/*   Created: 2023/02/19 02:06:16 by nnakarac          #+#    #+#             */
+/*   Updated: 2023/02/19 02:51:35 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef HUMANA_H
+# define HUMANA_H
+
 #include <iostream>
-#include <cctype>
+#include <string>
+#include "Weapon.hpp"
 
-char	ft_toupper(char c)
+class HumanA
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
-}
+private:
+	std::string	_name;
+	Weapon& _weapon;
 
-int main(int argc, char **argv)
-{
-	int i;
-	int j;
+public:
+	HumanA(std::string name, Weapon& wname);
+	~HumanA();
 
-	i = 1;
-	j = 0;
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	while (i < argc)
-	{
-		while (argv[i][j])
-		{
-			std::cout << (char)ft_toupper(argv[i][j]);
-			j++;
-		}
-		i++;
-		j = 0;
-	}
-	std::cout << std::endl;
-	return (0);
-}
+	void attack(void);
+};
+
+#endif

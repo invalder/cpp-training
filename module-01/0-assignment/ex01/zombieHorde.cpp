@@ -1,44 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/16 12:40:57 by nnakarac          #+#    #+#             */
-/*   Updated: 2023/02/18 15:31:27 by nnakarac         ###   ########.fr       */
+/*   Created: 2023/02/18 18:06:56 by nnakarac          #+#    #+#             */
+/*   Updated: 2023/02/19 01:36:15 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cctype>
+#include "Zombie.hpp"
 
-char	ft_toupper(char c)
+Zombie* zombieHorde( int N, std::string name )
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
-}
+	Zombie	*zombies = new Zombie[N];
 
-int main(int argc, char **argv)
-{
-	int i;
-	int j;
-
-	i = 1;
-	j = 0;
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	while (i < argc)
+	for(int i = 0; i < N; i++)
 	{
-		while (argv[i][j])
-		{
-			std::cout << (char)ft_toupper(argv[i][j]);
-			j++;
-		}
-		i++;
-		j = 0;
+		zombies[i].set_name(name);
 	}
-	std::cout << std::endl;
-	return (0);
+	return (zombies);
+
 }
