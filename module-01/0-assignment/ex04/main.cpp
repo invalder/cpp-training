@@ -6,7 +6,7 @@
 /*   By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 09:16:45 by nnakarac          #+#    #+#             */
-/*   Updated: 2023/02/19 10:27:40 by nnakarac         ###   ########.fr       */
+/*   Updated: 2023/02/19 11:44:52 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,5 @@ int	main(int argc, char **argv)
 		// Exit the program
 		return 1;
 	}
-
 	return (0);
 }
