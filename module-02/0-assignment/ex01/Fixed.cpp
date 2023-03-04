@@ -6,7 +6,7 @@
 /*   By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 00:56:25 by nnakarac          #+#    #+#             */
-/*   Updated: 2023/03/04 15:11:41 by nnakarac         ###   ########.fr       */
+/*   Updated: 2023/03/04 16:47:10 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	Fixed::toInt(void) const
 
 Fixed& Fixed::operator=(const Fixed &rhs)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
+	// std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &rhs)
 		this->setRawBits(rhs.getRawBits());
 	return (*this);
@@ -72,5 +72,7 @@ std::ostream & operator<<(std::ostream & o, Fixed const & rhs)
 	o << rhs.toFloat();
 	return (o);
 }
+
+// Comparison Operator
 
 const int Fixed::_fbits = 8;
