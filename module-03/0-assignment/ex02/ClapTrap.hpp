@@ -6,7 +6,7 @@
 /*   By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 02:15:57 by nnakarac          #+#    #+#             */
-/*   Updated: 2023/03/11 16:13:55 by nnakarac         ###   ########.fr       */
+/*   Updated: 2023/03/11 18:51:45 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <string>
 
 class ClapTrap{
-	private:
+	protected:
 		std::string	__Name;
 		int			__HP;
 		int			__EP;
