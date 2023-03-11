@@ -6,7 +6,7 @@
 /*   By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 21:47:04 by nnakarac          #+#    #+#             */
-/*   Updated: 2023/03/10 22:07:44 by nnakarac         ###   ########.fr       */
+/*   Updated: 2023/03/10 23:38:38 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ If P lies inside the triangle, then A1 + A2 + A3 must be equal to A.
 */
 
 int main ( void ) {
-    if ( bsp( Point(0.0f, 0.0f), Point(10.0f, 30.0f), Point(20.0f, 0.0f), Point(30.0f, 15.0f) ) == true ) {
+    if ( bsp( Point(0.0f, 0.0f), Point(10.0f, 30.0f), Point(20.0f, 0.0f), Point(20.0f, 0.0f) ) == true ) {
         std::cout << "Point is in the triangle" << std::endl;
     } else {
         std::cout << "Point is not in the triangle" << std::endl;

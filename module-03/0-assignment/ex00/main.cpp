@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/03 23:23:36 by nnakarac          #+#    #+#             */
-/*   Updated: 2023/03/11 01:44:17 by nnakarac         ###   ########.fr       */
+/*   Created: 2023/03/11 13:06:30 by nnakarac          #+#    #+#             */
+/*   Updated: 2023/03/11 16:05:06 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __FIXED_HPP__
-# define __FIXED_HPP__
+#include "ClapTrap.hpp"
 
-# include <iostream>
-# include <string>
-
-class Fixed
+int	main (void)
 {
-private:
-	/* data */
-	int					_fp;	//private __ protect _ public none
-	static const int	_fbits;
-public:
-	Fixed(void);
-	Fixed(const int n);
-	Fixed(Fixed const & src);
-	~Fixed();
+	ClapTrap proton;
+	ClapTrap z("Zaku");
 
-	Fixed& operator=(const Fixed & rhs); //Canonical Form
-
-	int		getRawBits(void) const;
-	void	setRawBits(int const raw);
-};
-#endif
+	for (int i = 0 ; i < 10 ; i++)
+	{
+		z.attack(proton.getName());
+		proton.takeDamage(z.getATK());
+		proton.beRepaired(1);
+		proton.attack(z.getName());
+		z.takeDamage(proton.getATK());
+		z.beRepaired(1);
+	}
+}

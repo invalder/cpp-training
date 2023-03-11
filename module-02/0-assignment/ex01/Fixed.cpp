@@ -6,7 +6,7 @@
 /*   By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 00:56:25 by nnakarac          #+#    #+#             */
-/*   Updated: 2023/03/04 16:47:10 by nnakarac         ###   ########.fr       */
+/*   Updated: 2023/03/10 23:26:28 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	Fixed::getRawBits(void) const
 	return (this->_fp);
 }
 
-void Fixed::setRawBits(int const raw)
+void Fixed::setRawBits(int const & raw)
 {
 	this->_fp = raw;
 }

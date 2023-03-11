@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/03 23:23:36 by nnakarac          #+#    #+#             */
-/*   Updated: 2023/03/11 01:44:17 by nnakarac         ###   ########.fr       */
+/*   Created: 2023/03/11 17:33:26 by nnakarac          #+#    #+#             */
+/*   Updated: 2023/03/11 18:20:05 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __FIXED_HPP__
-# define __FIXED_HPP__
+#ifndef __DIAMONDTRAP_HPP__
+# define __DIAMONDTRAP_HPP__
 
-# include <iostream>
-# include <string>
+# include "ScavTrap.hpp"
+# include "FragTrap.hpp"
 
-class Fixed
+class DiamondTrap : public ScavTrap, public FragTrap
 {
-private:
-	/* data */
-	int					_fp;	//private __ protect _ public none
-	static const int	_fbits;
-public:
-	Fixed(void);
-	Fixed(const int n);
-	Fixed(Fixed const & src);
-	~Fixed();
+	private:
+		std::string	__Name;
+	public:
+		DiamondTrap();
+		DiamondTrap(std::string const name);
+		DiamondTrap(DiamondTrap const &ref);
 
-	Fixed& operator=(const Fixed & rhs); //Canonical Form
+		~DiamondTrap();
 
-	int		getRawBits(void) const;
-	void	setRawBits(int const raw);
+		DiamondTrap & operator=(DiamondTrap const &rhs);
+
+		using ScavTrap::attack;
+
+		void whoAmI();
 };
+
 #endif

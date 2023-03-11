@@ -6,7 +6,7 @@
 /*   By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 23:23:36 by nnakarac          #+#    #+#             */
-/*   Updated: 2023/03/04 11:09:29 by nnakarac         ###   ########.fr       */
+/*   Updated: 2023/03/10 23:25:15 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ public:
 	Fixed& operator=(const Fixed & rhs); //Canonical Form
 
 	int		getRawBits(void) const;
-	void	setRawBits(int const raw);
+	void	setRawBits(int const & raw);
 
 	float	toFloat(void) const;
 	int		toInt(void) const;
