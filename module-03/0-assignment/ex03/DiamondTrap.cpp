@@ -6,7 +6,7 @@
 /*   By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 17:33:28 by nnakarac          #+#    #+#             */
-/*   Updated: 2023/03/11 18:22:25 by nnakarac         ###   ########.fr       */
+/*   Updated: 2023/03/11 18:25:58 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,5 @@ DiamondTrap & DiamondTrap::operator=(DiamondTrap const & rhs)
 
 void DiamondTrap::whoAmI(void)
 {
-	std::cout << "Who Am I, Phom Pen NukSukSa " << this->getName() << " | " << ClapTrap::getName() << std::endl;
+	std::cout << "Who Am I, Phom Pen NakSukSa " << this->getName() << " | " << ClapTrap::getName() << std::endl;
 }
