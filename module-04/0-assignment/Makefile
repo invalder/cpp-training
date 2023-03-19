@@ -6,7 +6,7 @@
 #    By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/13 16:40:39 by nnakarac          #+#    #+#              #
-#    Updated: 2023/03/11 19:15:00 by nnakarac         ###   ########.fr        #
+#    Updated: 2023/03/18 14:25:13 by nnakarac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,9 @@ UNAME = $(shell uname -s)
 ARCH = $(shell arch)
 
 ifeq ($(UNAME), Linux)
-	BEGIN = aplay easter_egg/Robot.mp3 &
+	BEGIN = aplay easter_egg/poring.mp3 &
 else
-	BEGIN = afplay easter_egg/Robot.mp3 -v 0.3 &
+	BEGIN = afplay easter_egg/poring.mp3 -v 0.3 &
 endif
 
 MEME2 = say -v kanya "กำลังรัน นอร์มิเน็ตโตะ" &
