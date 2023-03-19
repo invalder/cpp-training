@@ -6,7 +6,7 @@
 /*   By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 15:27:35 by nnakarac          #+#    #+#             */
-/*   Updated: 2023/03/19 07:58:26 by nnakarac         ###   ########.fr       */
+/*   Updated: 2023/03/19 12:41:35 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Cat::Cat(void): Animal("Cat")
 Cat::Cat(Cat const & ref): Animal("Cat")
 {
 	_type = ref._type;
-	__brain = new Brain;
+	__brain = new Brain(*ref.__brain);
 	std::cout << "Pet me moreeee" << std::endl;
 }
 

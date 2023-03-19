@@ -6,7 +6,7 @@
 /*   By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 16:06:19 by nnakarac          #+#    #+#             */
-/*   Updated: 2023/03/19 07:53:53 by nnakarac         ###   ########.fr       */
+/*   Updated: 2023/03/19 13:00:50 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Dog::Dog(void): Animal("Dog")
 Dog::Dog(Dog const & ref): Animal("Dog")
 {
 	_type = ref._type;
-	__brain = new Brain();
+	__brain = new Brain(*ref.__brain);
 	std::cout << "Good Boi has a Clone with a Brain" << std::endl;
 }
 
