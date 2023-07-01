@@ -6,7 +6,7 @@
 #    By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/13 16:40:39 by nnakarac          #+#    #+#              #
-#    Updated: 2023/07/01 11:14:01 by nnakarac         ###   ########.fr        #
+#    Updated: 2023/07/02 00:30:43 by nnakarac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,8 @@ SPONSOR7 = say -v kanya -r 20 "ให้ผ่านเถอะครับ ผ
 
 BEGIN2 = ./easter_egg/Robot.sh
 
+ROLL = ./easter_egg/Roll.sh
+
 remote:
 	@find ./ex*/ -type d -exec make -C {} ';'
 
@@ -46,5 +48,8 @@ remote-re:
 credits:
 	@$(BEGIN)
 	@$(BEGIN2)
+
+rolls:
+	@$(ROLL)
 
 .PHONY: remote remote-clean remote-re credits anya sponsor
