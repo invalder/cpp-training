@@ -55,12 +55,12 @@ void Bureaucrat::setGrade(const int& grade)
 
 void Bureaucrat::gradeIncrement(void)
 {
-	this->setGrade(_grade + 1);
+	this->setGrade(_grade - 1);
 }
 
 void Bureaucrat::gradeDecrement(void)
 {
-	this->setGrade(_grade - 1);
+	this->setGrade(_grade + 1);
 }
 
 void Bureaucrat::signForm(AForm& f)
