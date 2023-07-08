@@ -32,7 +32,7 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 		throw AForm::AFormNotSigned();
 	}
 
-	std::srand(std::time(nullptr)); // use current time as seed for random generator
+	std::srand(std::time(0)); // use current time as seed for random generator
     int random_action = std::rand() % 8;
 	system("afplay ../easter_egg/drill2.mp3");
 

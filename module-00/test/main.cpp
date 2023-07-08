@@ -5,7 +5,7 @@ int	main(void)
 {
 	phonebook	*pb;
 
-	pb = nullptr;
+	pb = 0;
 	pb = new phonebook;
 	// // // m1.contacts = new contact[5];
 
@@ -23,6 +23,6 @@ int	main(void)
 
 	// // delete[] m1.contacts;
 	delete pb;
-	pb = nullptr;
+	pb = 0;
 	return (0);
 }

@@ -30,7 +30,7 @@ char	*contact::getname(void) const
 phonebook::phonebook()
 {
 	std::cout << "Mother Construction" << std::endl;
-	this->contacts = nullptr;
+	this->contacts = 0;
 	this->contacts = new contact[5];
 	std::cout << "Mother Construction Completed" << std::endl;
 	return ;
@@ -40,6 +40,6 @@ phonebook::~phonebook()
 {
 	std::cout << "Mother On Hold, Cancel" << std::endl;
 	delete[] this->contacts;
-	this->contacts = nullptr;
+	this->contacts = 0;
 	return ;
 }
