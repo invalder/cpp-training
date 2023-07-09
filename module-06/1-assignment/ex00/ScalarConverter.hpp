@@ -12,7 +12,8 @@
 
 class ScalarConverter {
 	private:
-		double	_input;
+		std::string	_strInput;
+		double		_input;
 	public:
 		ScalarConverter(void);
 		ScalarConverter(char *str);
@@ -30,6 +31,8 @@ class ScalarConverter {
 
 		bool	isInf(double value);
 		bool	isInf(float value);
+
+		void	printConvertedValues(void);
 };
 
 #endif

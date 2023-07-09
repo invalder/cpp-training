@@ -10,11 +10,11 @@ int	main(int argc, char **argv)
 	}
 	std::cout << "your input is " << argv[1] << std::endl;
 
-	std::string str(argv[1]);
+	// std::string str(argv[1]);
 
-	ScalarConverter sc;
+	ScalarConverter sc(argv[1]);
 
-	sc.printConvertedValues(str);
+	sc.printConvertedValues();
 
 	return (0);
 }
