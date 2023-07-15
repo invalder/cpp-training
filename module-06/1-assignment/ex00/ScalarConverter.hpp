@@ -32,7 +32,10 @@ class ScalarConverter {
 		bool	isInf(double value);
 		bool	isInf(float value);
 
+		bool	isDigit(const std::string& str);
+
 		void	printConvertedValues(void);
+		void	printImpossible(void);
 };
 
 #endif

@@ -32,6 +32,8 @@ class AForm
 
 		void		beSigned(const Bureaucrat &);
 
+		bool		beExecute(const Bureaucrat &) const;
+
 		class GradeTooHighException: public std::exception
 		{
 			const char* what(void) const throw();

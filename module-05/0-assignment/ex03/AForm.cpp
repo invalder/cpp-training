@@ -70,6 +70,19 @@ void AForm::beSigned(const Bureaucrat & b)
 	}
 }
 
+bool AForm::beExecute(const Bureaucrat & b) const
+{
+	if (b.getGrade() > this->getGradeToExecute())
+	{
+		throw Bureaucrat::GradeTooLowException();
+	}
+	if (!this->getStatus())
+	{
+		throw AForm::AFormNotSigned();
+	}
+	return (true);
+}
+
 std::string	AForm::getName(void) const
 {
 	return _name;

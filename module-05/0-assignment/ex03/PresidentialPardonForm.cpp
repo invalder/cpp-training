@@ -23,15 +23,20 @@ PresidentialPardonForm::~PresidentialPardonForm(void)
 
 void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
-	if (executor.getGrade() > this->getGradeToExecute())
+	// if (executor.getGrade() > this->getGradeToExecute())
+	// {
+	// 	throw Bureaucrat::GradeTooLowException();
+	// }
+	// if (!this->getStatus())
+	// {
+	// 	throw AForm::AFormNotSigned();
+	// }
+	if (this->beExecute(executor))
 	{
-		throw Bureaucrat::GradeTooLowException();
-	}
-	if (!this->getStatus())
-	{
-		throw AForm::AFormNotSigned();
+		system("afplay ../easter_egg/Zaphod_Beeblebrox.mp3");
+		std::cout << this->_target << " has been pardoned by Zabphod Beeblebrox" << std::endl;
 	}
 
-	system("afplay ../easter_egg/Zaphod_Beeblebrox.mp3");
-	std::cout << this->_target << " has been pardoned by Zabphod Beeblebrox" << std::endl;
+	// system("afplay ../easter_egg/Zaphod_Beeblebrox.mp3");
+	// std::cout << this->_target << " has been pardoned by Zabphod Beeblebrox" << std::endl;
 }
