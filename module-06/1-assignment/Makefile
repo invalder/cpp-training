@@ -6,7 +6,7 @@
 #    By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/13 16:40:39 by nnakarac          #+#    #+#              #
-#    Updated: 2023/07/02 00:30:43 by nnakarac         ###   ########.fr        #
+#    Updated: 2023/07/16 01:26:31 by nnakarac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,9 @@ remote-fclean:
 
 remote-re:
 	@find ./ex*/ -type d -exec make -C {} re ';'
+
+remote-run:
+	@find ./ex* -perm -u=x -type f -exec {} $(ARGS) ';'
 
 credits:
 	@$(BEGIN)

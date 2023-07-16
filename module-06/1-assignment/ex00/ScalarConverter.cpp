@@ -88,6 +88,11 @@ int	ScalarConverter::convertToInt(void)
 
 	try
 	{
+		if (this->_input > std::numeric_limits<int>::max() || this->_input < std::numeric_limits<int>::min())
+		{
+			std::cout << "int: impossible" << std::endl;
+			return (0);
+		}
 		output = static_cast<int>(this->_input);
 	}
 	catch (std::exception &e)
