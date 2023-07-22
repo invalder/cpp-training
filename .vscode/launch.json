@@ -8,9 +8,9 @@
 			"type": "lldb",
 			"request": "launch",
 			"name": "Debug",
-			"program": "${workspaceFolder}/minishell_eval/minishell",
+			"program": "${workspaceFolder}/module-08/0-assignment/ex01/Span",
 			"args": [],
-			"cwd": "${workspaceFolder}/minishell_eval/"
+			"cwd": "${workspaceFolder}/module-08/"
 		}
 	]
 }
