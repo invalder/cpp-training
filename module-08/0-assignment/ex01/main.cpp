@@ -14,7 +14,7 @@ int		main(void)
 			Span sp1 = Span(N);
 			srand(time(NULL));
 			for (int i = 0; i < (int)M; i++)
-				sp1.addNumber(rand() % 10000);
+				sp1.addNumber( -1 * (rand() % 10000));
 			// std::cout << sp1 << std::endl; // Uncomment this line to see the vector
 			std::cout << sp1.shortestSpan() << std::endl;
 			std::cout << sp1.longestSpan() << std::endl;
@@ -28,10 +28,10 @@ int		main(void)
 		std::cout << std::endl << "5 Numbers" << std::endl;
 		try
 		{
-			Span sp = Span(5);
-			sp.addNumber(6);
-			sp.addNumber(3);
-			sp.addNumber(17);
+			Span sp = Span(-5);
+			sp.addNumber(-6);
+			sp.addNumber(-3);
+			sp.addNumber(-17);
 			sp.addNumber(9);
 			sp.addNumber(11);
 			std::cout << "Span " << sp << std::endl;
