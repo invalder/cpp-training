@@ -16,6 +16,5 @@ int	main(int argc, char **argv)
 		std::cerr << "Exception: " << e.getMessage() << std::endl;
 		return 1;
 	}
-
 	return (0);
 }

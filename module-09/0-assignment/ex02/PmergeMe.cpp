@@ -122,6 +122,32 @@ PmergeMe<T>::PmergeMe(int ac, char **av) : _argc(ac), _argv(av)
 }
 
 template <typename T>
+PmergeMe<T>::PmergeMe(const PmergeMe &ref) : _n(ref._n), _argc(ref._argc), _argv(ref._argv)
+{
+	parseInput();
+
+	if (isSorted(_vectorInput) || isSorted(_dequeInput))
+		throw (InputException(ERR_SORTED));
+}
+
+template <typename T>
+PmergeMe<T>&	PmergeMe<T>::operator=(const PmergeMe & rhs)
+{
+	if (this != &rhs)
+	{
+		this->_n = rhs._n;
+		this->_argc = rhs._argc;
+		this->_argv = rhs._argv;
+
+		parseInput();
+
+		if (isSorted(_vectorInput) || isSorted(_dequeInput))
+			throw (InputException(ERR_SORTED));
+	}
+	return (*this);
+}
+
+template <typename T>
 PmergeMe<T>::~PmergeMe(){
 }
 
