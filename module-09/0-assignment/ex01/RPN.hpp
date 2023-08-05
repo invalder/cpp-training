@@ -14,7 +14,7 @@ public:
 	RPN(/* args */);
 	~RPN();
 
-	 double	evaluateRPNExpression(const std::string& expression);
+	double	evaluateRPNExpression(const std::string& expression);
 	double	performOperation(double operand1, double operand2, const std::string& op);
 	bool	isOperator(const std::string& token);
 };

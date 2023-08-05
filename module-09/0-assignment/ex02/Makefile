@@ -6,14 +6,14 @@
 #    By: nnakarac <nnakarac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/13 12:00:53 by nnakarac          #+#    #+#              #
-#    Updated: 2023/07/31 00:56:04 by nnakarac         ###   ########.fr        #
+#    Updated: 2023/08/05 02:28:14 by nnakarac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = PmergeMe
 
 CC = c++
-CFLAGS	= -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++11 -fsanitize=address
+CFLAGS	= -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98 -fsanitize=address
 
 RM		= rm -rf
 
@@ -28,8 +28,8 @@ SRC_DIR = ./
 OBJ_DIR = objs/
 OBJS = $(SRCS:.cpp=.o)
 
-SRCS = main.cpp \
-	PmergeMe.cpp
+SRCS = PmergeMe.cpp \
+	main.cpp \
 
 DBG = *.dSYM
 
@@ -47,7 +47,7 @@ endif
 
 $(NAME): $(addprefix $(OBJ_DIR),$(OBJS))
 	@printf "$(CURSIVE)$(GRAY) 	- Compiling $(NAME)... $(RESET)\n"
-	@$(CC) -g $(CFLAGS) $(addprefix $(OBJ_DIR),$(OBJS)) -o $(NAME)
+	@$(CC) $(CFLAGS) $(addprefix $(OBJ_DIR),$(OBJS)) -o $(NAME)
 	@printf "$(GREEN)    - $(NAME) Executable ready.\n$(RESET)"
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
